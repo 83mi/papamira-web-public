@@ -1,0 +1,60 @@
+<link href="/css/words.css" rel="stylesheet">
+<br>
+<br>
+<br>
+<div class="container">
+  <h1><span class="oi oi-pencil"></span>最近の検索履歴</h1>
+  <br>
+  <div class="container">
+
+    <button id='calendar' type='button' class='btn btn-primary' style="font-size: 42px;" data-toggle='collapse' data-target='#ppap_calendar' aria-expanded='false' aria-controls='ppap_calendar'><span class="oi oi-calendar">カレンダ</span></button>
+    <div id="ppap_calendar" class="collapse">
+      <br>
+      <input id="datepicker" style="width:10%;" type="text" size="7" placeholder="日付入力"/>
+      <button id="calendar_done" class="btn btn-primary oi oi-calendar" style="font-size: 18px;">選択</button>
+    </div>
+    <br>
+    <br>
+
+    <button type='button' style="font-size: 42px;" class='btn badge badge-success' data-toggle='collapse' data-target='#all_parts'>すべて</button><p>
+    <div class="container collapse show" id="all_parts">
+      <table class="table table-striped table-hover" style="border-collapse: collapse; table-layout: fixed;">
+        <tbody id="words_result_all">
+        </tbody>
+      </table>
+    </div>
+    <button type='button' style="font-size: 42px;" class='btn badge badge-danger' data-toggle='collapse' data-target='#s_parts'>S鯖</button><p>
+    <div class="container collapse show" id="s_parts">
+      <table class="table table-striped table-hover" style="border-collapse: collapse; table-layout: fixed;">
+        <tbody id="words_result_s">
+        </tbody>
+      </table>
+    </div>
+    <button type='button' style="font-size: 42px;" class='btn badge badge-primary' data-toggle='collapse' data-target='#b_parts'>B鯖</button><p>
+    <div class="container collapse show" id="b_parts">
+      <table class="table table-striped table-hover" style="border-collapse: collapse; table-layout: fixed;">
+        <tbody id="words_result_b">
+        </tbody>
+      </table>
+    </div>
+    <button type='button' style="font-size: 42px;" class='btn badge badge-warning' data-toggle='collapse' data-target='#v_parts'>V鯖</button><p>
+    <div class="container collapse show" id="v_parts">
+      <table class="table table-striped table-hover" style="border-collapse: collapse; table-layout: fixed;">
+        <tbody id="words_result_v">
+        </tbody>
+      </table>
+    </div>
+    <button type='button' style="font-size: 42px;" class='btn badge badge-secondary' data-toggle='collapse' data-target='#g_parts'>G鯖</button><p>
+    <div class="container collapse show" id="g_parts">
+      <table class="table table-striped table-hover" style="border-collapse: collapse; table-layout: fixed;">
+        <tbody id="words_result_g">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.ui.datepicker-ja.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/js/words.js"></script>

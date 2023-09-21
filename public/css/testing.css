@@ -1,0 +1,52 @@
+/* 大枠 */
+#waku {
+    width:640px;
+    border-style:solid; 
+    border-width:1px;
+    padding: 10px;
+}
+ 
+/* 右枠・ドラッグ枠 */
+#dragArea {
+    width:255px;
+    padding: 10px;
+    border-style:solid; 
+    border-width:3px; 
+    float:right;
+}
+ 
+/* divのfloatの解除用 */
+.clear {
+    clear:both; 
+}
+ 
+/* 左枠・ドロップ枠 */
+#dropArea {
+    padding: 10px;
+    border-style:solid; 
+    border-width:3px; 
+    float:left;
+}
+ 
+/* 左枠・ドロップ枠 */
+#dropArea ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+ 
+#dropArea li {
+    margin: 5px;
+    padding: 5px;
+    width: 90%;
+}
+ 
+#sort-drop-area {
+    width: 252px;
+    padding: 5px 0;
+    border: 1px dashed yellow;
+    border-radius: 10px;
+    border-width: 3px;
+}
+ 

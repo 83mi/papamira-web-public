@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.img_border {
+  border: 5px #000000 dotted;
+}

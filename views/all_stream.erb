@@ -1,0 +1,87 @@
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/stream.css" rel="stylesheet">
+<div class="row">
+  <div class="col-sm-11" id="stream_cell">
+  <div class="card border-0" style="top: -32px;">
+  <div class="card-body">
+    <div class="ppap_field">
+      <p style="font-size:42px">
+        <button type='button' class="btn badge badge-success font-weight-bold" data-toggle='collapse' data-target='#stream_parts'>ALL</button><span class="font-weight-bold"> Log Streaming</span><span class="image-ppap oi oi-flash"></span>
+        <span id="connect_status" style="font-size: 18px"></span>
+      </p>
+      <div id="stream_parts" class="collapse show">
+        <textarea id="push_word" name="push_word" style="height:32px; width:75%;" autocomplete="on" placeholder="通知キーワード 詳細は/help"></textarea>
+        <button class="btn btn-primary" style="vertical-align: top; height:32px; line-height: 18px" data-toggle="modal" data-backdrop="static" data-target="#modal-regular"><span class="oi oi-wrench"></span>組み立て</button>
+        <a id="stream_help" class="btn btn-primary text-white" style="vertical-align: top; line-height: 18px;" href="/help#topic8" target="_blank"><span class="oi oi-file"></span>HELP</a>
+        <br>
+        <button id="push_word_clear" type="button" class="btn btn-primary btn-sm" title="現在入力中の通知キーワードをクリアします"><span class="oi oi-trash"></span>クリア</button>
+        <button id="push_word_load" type="button" class="btn btn-primary btn-sm" title="保存された通知キーワードをCookieに読み込みます"><span class="oi oi-data-transfer-download"></span>読込</button>
+        <button id="push_word_save" type="button" class="btn btn-primary btn-sm" title="通知キーワードをCookieに保存します"><span class="oi oi-data-transfer-upload"></span>保存</button>
+        <button id="push_setting" type="button" class="btn btn-success btn-sm" title="デスクトップ通知の設定を呼び出します"><span class="oi oi-headphones">通知設定</span></button>
+        <button id='preset_button' type='button' class='btn btn-primary btn-sm' data-toggle='collapse' data-target='#stream_preset' aria-expanded='false' aria-controls='stream_preset'>キーワードプリセット</button>
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-backdrop="true" data-target="#modal-setting"><span class="oi oi-wrench"></span>各種設定</button>
+        <br>
+
+        <label class="control-label badge" for="volume_voice"></label>
+        <span id="volume_star1" class="oi oi-volume-off"></span>
+        <input id='volume_voice' class="input-range" type="range" value="30" min="0" max="200" data-unit="%" title="ボリューム">
+        <span id="volume_star2" class="oi oi-musical-note"></span>
+
+        <select style="font-size:12px" id="auto_voice" title="音声再生の方法">
+          <option value="0" selected="selected">音声再生なし</option>
+          <option value="1">VoiceAPI</option>
+          <option value="2">WebSpeech</option>
+        </select>
+
+        <div id="stream_preset" class="collapse">
+          <button id="keyword_preset_0" type="button" class="btn btn-info btn-sm">ギルド</button>
+          <button id="keyword_preset_1" type="button" class="btn btn-info btn-sm">秘密</button>
+          <button id="keyword_preset_2" type="button" class="btn btn-info btn-sm">かけら出し</button>
+          <button id="keyword_preset_3" type="button" class="btn btn-info btn-sm">各種代行</button>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div id="stream_text"></div>
+      <table id="stream_table" class="table table-sm">
+        <thead>
+          <tr>
+            <th class="text-nowrap fixed">鯖</th>
+            <th class="text-nowrap fixed">時間</th>
+            <th class="text-nowrap fixed">名前</th>
+            <th>内容</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+  </div>
+  </div>
+  </div>
+  <%=
+    live = File.open('views/live.erb').read
+    live.gsub!("CHAT_BODY", @chat_body.to_s)
+    live.gsub!("CHAT_PEOPLE", @chat_people.to_s)
+  %>
+</div>
+<%=
+  File.open('views/regular_tools.erb').read
+%>
+<%=
+  File.open('views/clipcopy.erb').read
+%>
+<%=
+  File.open('views/stream_setting.erb').read
+%>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/favico-0.3.10.min.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/js/title_notifier.min.js"></script>
+<script src="/js/Notification.min.js"></script>
+<script src="/js/audio.js"></script>
+<script src="/js/live.js"></script>
+<script src="/js/all_stream.js"></script>
+<script src="/js/numberRangeRegexp.js"></script>
+<script src="/js/regular_tools.js"></script>

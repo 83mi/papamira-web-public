@@ -1,0 +1,54 @@
+<br>
+<link href="/css/home.css" rel="stylesheet">
+<br>
+<div class="container">
+  <p style="font-size: 128px; font-weight: bold;">papamira</p>
+  Papamira is a chat viewer for web applications in Ruby :)
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-3 col-xl-2">
+      <div class="inner left">
+        <br>
+        <br>
+        <span class="home-ppap"><a href="/top"><img src="png/ppap.png" alt="ppap" class="bigEntrance move-image image-ppap"/></a></span>
+      </div>
+    </div>
+    <div class="col-sm-9 col-xl-10">
+      <br>
+      <br>
+      <div class="left">
+        <div id="stream_text"></div>
+          <table id="stream_table" class="table">
+            <tbody>
+              <%= @body %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-xl-12">
+        <br>
+        <br>
+        <div class="card">
+        <div class="card-header h6">Status</div>
+        <div class="card-body">
+          <p class="card-text">
+            Server HP: <%= "夢いっぱい" %><br>
+            Power: <%= @power + " PPAP" %><br>
+            Version: <%= @server_version %><br>
+            <br>
+            <%= @last_update %> Last Update.<br>
+            <%= @first_update %> first init.<br>
+          </p>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/home.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="1wR6RSOAWG8X9U0ggwo9nVh3U-6ORHl-x5AHQKouLpQ" />
+<meta name="msvalidate.01" content="E93B626472232F97E74F6699A0988A7B" />
+<meta name="description" content="お叫びの収集サイトです。" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link id="favicon" rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48">
+<link id="favicon2" rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link id="favicon3" rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/jquery-ui.min.css" rel="stylesheet">
+<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<link href="/css/home.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<title>お叫びサイト - ぱぱみら</title>
+</head>
+<body>
+
+<div id="noti_area" class="hide">
+  <div id="update_noti" class="fade hide" role="alert">
+    <span id=update_text></span>
+  </div>
+  <div id="message_noti" class="fade hide" role="alert">
+    <span id=message_text></span>
+  </div>
+</div>
+<%=
+  File.open('views/search.erb').read
+%>
+<div id=version class="<%= Papamira_Status.Version %>"></div>
+<script src="/js/jquery.min.js"></script>
+<%= yield %>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/share.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/uniq_id.js"></script>
+<script src="/js/version.js"></script>
+</body>
+</html>

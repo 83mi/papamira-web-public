@@ -1,0 +1,21 @@
+<div id="live_cell" class="col-sm-1">
+  <button type="button" id="live_visible" class="btn btn-primary" style="width:58px;" data-toggle="collapse" data-target="#live_chat" aria-expanded="false" aria-controls="live_chat">Live</button>
+  <span id="live_people" class="btn btn-success" style="vertical-align:top; width:58px; height:38px; line-height:24px;" data-container="body" data-toggle="popover" data-placement="left" title="LiveChat新着" data-content="">CHAT_PEOPLE人</span>
+  <br>
+  <div class="collapse" id="live_chat">
+    <div class="card border-dark">
+      <div class="card-body">
+        <div class="form-group has-success">
+          <div class="navbar-form">
+            <small>
+              <input class="required" type="text" id="stream_chat_name" name="text" size="20" style="width: 100%;" placeholder="名前" />
+              <br>
+              <textarea class="required" id="stream_chat_text" rows="2" style="width: 100%;" placeholder="本文" onkeydown="enter();"></textarea>
+            </small>
+            <div id="stream_chat_body">CHAT_BODY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

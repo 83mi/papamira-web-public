@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="google-site-verification" content="1wR6RSOAWG8X9U0ggwo9nVh3U-6ORHl-x5AHQKouLpQ" />
+<meta name="msvalidate.01" content="E93B626472232F97E74F6699A0988A7B" />
+<meta name="description" content="お叫びの収集サイトです。" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link id="favicon" rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48">
+<link id="favicon2" rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link id="favicon3" rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/jquery-ui.min.css" rel="stylesheet">
+<link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+<link href="/css/ef.css" rel="stylesheet">
+<title>お叫びサイト - ぱぱみら</title>
+</head>
+<body>
+
+<div id="noti_area" class="hide">
+  <div id="update_noti" class="fade hide" role="alert">
+    <span id=update_text></span>
+  </div>
+  <div id="message_noti" class="fade hide" role="alert">
+    <span id=message_text></span>
+  </div>
+</div>
+
+<header>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <a class="navbar-brand">
+      <img id="pico" src="/favicon-32x32.png" width="32" height="32" class="image-ppap d-inline-block align-top" alt="pico" title="">
+    </a>
+    <a href="/" class="nav-link text-dark h4"><span class="oi oi-home"></span>ホーム</a>
+    <div class="nav-item dropdown">
+      <a href="" class="nav-link dropdown-toggle text-dark h4" data-toggle="dropdown">コンテンツ</a>
+      <div class="dropdown-menu bg-white">
+        <a href="" class="nav-link dropdown-item text-dark h4" data-toggle="dropdown">雄叫び</a>
+        <a href="/s/ppap"><p class="bg-white text-danger dropdown-item h4"><span class="oi oi-wifi"></span>S鯖</p></a>
+        <a href="/b/ppap"><p class="bg-white text-primary dropdown-item h4"><span class="oi oi-wifi"></span>B鯖</p></a>
+        <a href="/v/ppap"><p class="bg-white text-warning dropdown-item h4"><span class="oi oi-wifi"></span>V鯖</p></a>
+        <a href="/g/ppap"><p class="bg-white text-secondary dropdown-item h4"><span class="oi oi-wifi"></span>G鯖</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="" class="nav-link dropdown-item text-dark h4" data-toggle="dropdown">Streaming</a>
+        <a href="/s/stream"><p class="bg-white text-danger dropdown-item h4"><span class="oi oi-flash"></span>S鯖</p></a>
+        <a href="/b/stream"><p class="bg-white text-primary dropdown-item h4"><span class="oi oi-flash"></span>B鯖</p></a>
+        <a href="/v/stream"><p class="bg-white text-warning dropdown-item h4"><span class="oi oi-flash"></span>V鯖</p></a>
+        <a href="/g/stream"><p class="bg-white text-secondary dropdown-item h4"><span class="oi oi-flash"></span>G鯖</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="/all/stream"><p class="bg-white text-success dropdown-item h4"><span class="oi oi-flash"></span>全鯖</p></a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="#" class="nav-link text-dark h4" data-toggle="modal" data-target="#modal-search" data-backdrop="static"><span class="oi oi-magnifying-glass"></span>検索</a>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="" class="nav-link dropdown-toggle text-dark h4" data-toggle="dropdown"></span>統計</a>
+      <div class="dropdown-menu bg-white">
+        <a href="/info"><p class="bg-white text-dark dropdown-item h4">統計4鯖</p></a>
+        <a href="/info_wdays"><p class="bg-white text-dark dropdown-item h4">曜日毎</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="/s/info"><p class="bg-white text-danger dropdown-item h4">今までのS鯖</p></a>
+        <a href="/b/info"><p class="bg-white text-primary dropdown-item h4">今までのB鯖</p></a>
+        <a href="/v/info"><p class="bg-white text-warning dropdown-item h4">今までのV鯖</p></a>
+        <a href="/g/info"><p class="bg-white text-secondary dropdown-item h4">今までのG鯖</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="/ranking"><p class="bg-white text-dark dropdown-item h4">ランキング</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="/words"><p class="bg-white text-dark dropdown-item h4">検索の履歴</p></a>
+      </div>
+    </div>
+    <div class="nav-item dropdown">
+      <a href="" class="nav-link dropdown-toggle text-dark h4" data-toggle="dropdown"></span>その他</a>
+      <div class="dropdown-menu bg-white">
+        <a href="/update"><p class="bg-white text-black dropdown-item h4">過去の情報</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="/help"><p class="bg-white text-dark dropdown-item h4">ヘルプ</p></a>
+        <a href="/gui"><p class="bg-white text-dark dropdown-item h4">GUI</p></a>
+        <a href="/gui/update"><p class="bg-white text-dark dropdown-item h4">GUI更新情報</p></a>
+        <a href="/dev"><p class="bg-white text-dark dropdown-item h4">devel</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="https://jbbs.shitaraba.net/bbs/read.cgi/netgame/15672/1550199441/" target="brank"><p class="bg-white text-dark dropdown-item h4">質問(外部リンク)</p></a>
+        <a href="https://jbbs.shitaraba.net/bbs/read.cgi/netgame/15672/1516430523/" target="brank"><p class="bg-white text-dark dropdown-item h4">過去ログ(外部リンク)</p></a>
+        <a href="/form"><p class="bg-white text-dark dropdown-item h4">お問い合わせ</p></a>
+        <div class="dropdown-divider"></div>
+        <a href="https://www.youtube.com/watch?v=0E00Zuayv9Q" class="nav-link bg-light text-dark h4" target="brank">
+          <img id="pico" src="/png/pico-icon.png" class="image-ppap d-inline-block align-top" alt="pico" title="">PPAP/PIKOTARO
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<%=
+  File.open('views/search.erb').read
+%>
+<br>
+<div id=version class="<%= Papamira_Status.Version %>"></div>
+<script src="/js/jquery.min.js"></script>
+<%= yield %>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/share.js"></script>
+<script src="/js/search.js"></script>
+<script src="/js/uniq_id.js"></script>
+<script src="/js/version.js"></script>
+</body>
+</html>

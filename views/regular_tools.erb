@@ -1,0 +1,121 @@
+<div class="modal fade" id="modal-regular" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h5 class="modal-title text-white"><strong><span class="oi oi-wrench"></span>正規表現組み立て</strong></h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label class="control-label badge" for="test_word">詳しい使い方はヘルプの通知キーワードの項目の箇所に記載しています</label>
+        <input type="text" id="test_word" style="width:90%;" placeholder="お叫び本文を入力"/>
+        <button id="test_word_reset" type="button" class="btn btn-primary badge-pill btn-sm" title="削除"><span class="oi oi-delete"></span></button>
+        <input type="text" id="test_reg" style="width:90%;" value="^.*$" placeholder="正規表現を入力 または,ボタンで追加"/>
+        <button id="test_reg_reset" type="button" class="btn btn-primary badge-pill btn-sm" title="削除"><span class="oi oi-delete"></span></button>
+        <br>
+        <br>
+        <button id="keyword_preset_redo" type="button" class="btn btn-primary badge-danger"><span class="oi oi-action-redo"></span>1つ戻す</button>
+        <button id="keyword_preset_reset" type="button" class="btn btn-primary"><span class="oi oi-layers"></span>プリセット</button>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  <label class="control-label badge" for="and_text">必ず含む単語</label>
+                  <input type="text" id="and_text" class="btn-primary" style="width:100%; vertical-align: top" placeholder="">
+                  <br>
+                  <button id="keyword_and_clear" type="button" class="btn btn-primary badge-pill btn-sm" style="width:30px;" title="削除"><span class="oi oi-delete"></span></button>
+                  <button id="keyword_preset_and" type="button" class="btn btn-primary badge-pill btn-sm text-white">追加</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  <label class="control-label badge" for="or_text">どれか1つ必ず含む単語</label>
+                  <input type="text" id="or_text" class="btn-warning" style="width:100%; vertical-align: top" placeholder="複数入力は,で区切る">
+                  <br>
+                  <button id="keyword_or_clear" type="button" class="btn btn-warning badge-pill btn-sm" style="width:30px;" title="削除"><span class="oi oi-delete"></span></button>
+                  <button id="keyword_preset_or" type="button" class="btn btn-warning badge-pill btn-sm text-white">追加</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  <label class="control-label badge" for="or_text">除外したい単語</label>
+                  <input type="text" id="not_text" class="btn-danger" style="width:100%; vertical-align: top" placeholder="複数入力は,で区切る">
+                  <br>
+                  <button id="keyword_not_clear" type="button" class="btn btn-danger badge-pill btn-sm" style="width:30px;" title="削除"><span class="oi oi-delete"></span></button>
+                  <button id="keyword_preset_not" type="button" class="btn btn-danger badge-pill btn-sm text-white">追加</button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">
+                  <label class="control-label badge" for="reg_int_1">数値範囲を正規表現へ変換</label>
+                  <input type="text" id="reg_int_1" style="height:26px; width:48%;" placeholder="範囲入力1"/>-<input type="text" id="reg_int_2" style="height:26px; width:48%;" placeholder="範囲入力2"/>
+                  <button type="button" class="btn btn-primary btn-sm" style="width:48%;" onclick="makeRegexp();">整数で作成</button>
+                  <button type="button" class="btn btn-primary btn-sm" style="width:48%;" onclick="makeRegexp(2);">実数で作成</button>
+                  <br>
+                  <br>
+                  <input type="text" id="reg_compile" style="width:100%;" placeholder="出力結果" readonly>
+                  <br>
+                  <button type="button" class="btn btn-secondary btn-sm" style="width: 54px" onclick="v2r_clear();">クリア</button>
+                  <button type="button" class="btn btn-primary btn-sm" style="width: 42px" onclick="v2r_send_and();">送る</button>
+                  <button type="button" class="btn btn-warning btn-sm" style="width: 42px" onclick="v2r_send_or();">送る</button>
+                  <button type="button" class="btn btn-danger btn-sm" style="width: 42px" onclick="v2r_send_not();">送る</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card border-0">
+              <div class="card-body">
+                <p class="card-text">
+                  <button id="run_reg" type="button" class="btn btn-success" style="height:56px; width:100%;"><span class="oi oi-wrench"></span>マッチテスト</button>
+                  <br>
+                  <br>
+                  <button id="run_copy" type="button" class="btn btn-primary badge-info" style="width:100%;"><span class="oi oi-clipboard"></span>クリップボードにコピー</button>
+                  <br>
+                  <button id="run_update" type="button" class="btn btn-primary badge-info" style="width:100%;"><span class="oi oi-share-boxed"></span>通知領域へ上書き</button>
+                  <button id="run_add" type="button" class="btn btn-primary badge-info" style="width:100%;"><span class="oi oi-share-boxed"></span>通知領域へ追加</button>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card border-0">
+              <div class="card-body">
+                <p class="card-text">
+                  <span id="test_res">出力結果:<br></span>
+                  <br>
+                  <br>
+                  <a class="btn btn-primary text-white" target="_blank" href="https://scriptular.com/" style="width:100%;"><span class="oi oi-link-intact"></span>scriptular</a>
+                  <br>
+                  <br>
+                  <a class="btn btn-primary text-white" target="_blank" href="/help#topic11" style="width:100%;"><span class="oi oi-file"></span>HELP</a>
+                  <br>
+                  <br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="reg_exit" type="button" class="btn btn-primary" style="width:100%;" data-dismiss="modal"><span class="oi oi-x"></span>閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>

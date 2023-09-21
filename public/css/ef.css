@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.ui-autocomplete {
+  z-index: 215000000 !important;
+}
+.pac-container {
+  z-index: 1051 !important;
+}
+
+.move-image{
+  animation: moveimg 5s infinite;
+  position: relative;
+}
+
+.image-ppap {
+  transition: 2.0s ;
+  -webkit-transform: rotateZ( 0deg );
+  transform: rotateZ( 0deg );
+  margin: 0;
+  padding: 0;
+}
+
+.image-ppap:hover {
+  -webkit-transform: rotateZ( 360deg );
+  transform: rotateZ( 360deg );
+}
+
+.image2-ppap {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.image2-ppap:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+.text-ppap {
+  font-size: small;
+  color: #4444FF;
+}
+
+.type-textbound {
+  font-size: 60px;
+  text-align: center;
+}
+
+.textbound1 {-webkit-animation: bound .5s ease-in-out;}
+     
+@-webkit-keyframes bound {
+  0% {transform: scale(0) translate(0,-500px);}
+  50% {transform: scaleX(2) translate(0,200px);}
+  70% {transform: scaleY(.5) translate(0,-100px);}
+  90% {transform: scaleX(1.5) translate(0,50px);}
+  100% {transform: scale(1) translate(0,0);}
+}
+
+.mask-mes {
+  width:      240px;
+  height:     307px;
+  overflow:   hidden;
+  margin:     10px 8px 10px 16px;
+  position:   relative;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.mask-mes .caption {
+  font-size: 100%;
+  color: #ffffff;
+  padding-top: 120px;
+  padding-left: 0px;
+}
+.mask-mes .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.4);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.mask-mes:hover .mask {
+  opacity: 1;
+  padding-top: 80px;
+  padding-left: 20px;
+}
+
+.mask-mes:hover {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}

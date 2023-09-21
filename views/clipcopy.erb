@@ -1,0 +1,21 @@
+<div class="modal" id="modal-copy" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success">
+        <h5 class="modal-title text-white"><span class="oi oi-wrench"></span><strong>おたけびの詳細,コマンド</strong></h5>
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <textarea id="shout" cols="4" style="width:90%;"></textarea><br>
+        <br>
+        <button id="shout_clipboard" type="button" class="btn btn-primary badge-pill btn-sm text-white" onclick="copy_shout_data()">クリップボードへコピー</button><br>
+        <br>
+        <button id="shout_regular" type="button" class="btn btn-primary badge-pill btn-sm text-white" onclick="copy_regular_data()">組み立てツールに送る</button><br>
+        <br>
+        <button type="button" class="btn btn-primary badge-pill btn-sm text-white" data-dismiss="modal"><span class="oi oi-x"></span>閉じる</button>
+      </div>
+    </div>
+  </div>
+</div>

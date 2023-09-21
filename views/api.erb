@@ -1,0 +1,160 @@
+<link href="/css/api.css" rel="stylesheet">
+<div class="container">
+<h1 class="mark"><span class="image-ppap oi oi-script"></span>ぱぱみらAPI</h1>
+<div id="toc"></div>
+<div class="container">
+<h2>Version</h2>
+<div class="container">
+* API 0.0.5
+</div>
+</div>
+<br>
+
+<div class="container">
+<h2 class="mark">戻り値</h2>
+<div class="container">
+* JSON形式
+</div>
+</div>
+<br>
+
+<div class="container">
+<h2 class="mark">APIリスト</h2>
+</div>
+<br>
+
+<div class="container">
+<h3 class="card">* バージョン情報</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/version<br>
+  ex: /api/v1/version
+  </p>
+</div>
+
+<h3 class="card">* ぱぱみらサーバ状況</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/server_alive<br>
+  パラメーター: server: [s,v,b,g,all]<br>
+  ex: /api/v1/server_alive?server=s
+  </p>
+</div>
+
+<h3 class="card">* ランダムで叫びを１つ取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/random_shout<br>
+  パラメーター: なし<br>
+  ex: /api/v1/random_shout
+  </p>
+</div>
+
+<h3 class="card">* 最新の叫びを100件取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/shout<br>
+  パラメーター: server: [s,b,v,g]<br>
+  ex: /api/v1/shout?server=s<br>
+  ex: /api/v1/shout?server=b<br>
+  ex: /api/v1/shout?server=v<br>
+  </p>
+</div>
+
+<h3 class="card">* 叫びを日単位で取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/shout_days<br>
+  パラメーター: server: [s,b,v,g]<br>
+  パラメーター: limit: [日数] nil or 1 - 14<br>
+  ex: /api/v1/shout?server=s&limit=1<br>
+  ex: /api/v1/shout?server=b&limit=4<br>
+  ex: /api/v1/shout?server=v&limit=7<br>
+  </p>
+</div>
+
+<h3 class="card">* 全鯖の最新叫びを120件取得(s,b,v,g計120さけび)</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/all_shout<br>
+  パラメーター: なし<br>
+  ex: /api/v1/all_shout
+  </p>
+</div>
+
+<h3 class="card">* 指定した日付の叫びを取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/select_day<br>
+  パラメーター: server: [s,v,b,g]<br>
+  パラメーター: day: [日付] yyyy-mm-dd or yyyy/mm/dd<br>
+  ex: /api/v1/select_day?server=s&day=2018/01/01<br>
+  ex: /api/v1/select_day?server=b&day=2018-01-01<br>
+  ex: /api/v1/select_day?server=v&day=2017/01/01<br>
+  </p>
+</div>
+
+<h3 class="card">* 指定した日付で指定した番号の叫びを取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/select_shout<br>
+  パラメーター: server: [s,v,b,g]<br>
+  パラメーター: day: [日付] yyyy-mm-dd-No or yyyy/mm/dd/No<br>
+  ex: /api/v1/select_shout?server=s&day=2018/01/01/1<br>
+  ex: /api/v1/select_shout?server=b&day=2018-01-01/10<br>
+  ex: /api/v1/select_shout?server=v&day=2018/01/01/100<br>
+  ex: /api/v1/select_shout?server=s&day=2018/01/01/1-10<br>
+  ex: /api/v1/select_shout?server=b&day=2018/01/01/l00-120<br>
+  ex: /api/v1/select_shout?server=v&day=2018/01/01/l00-120,200<br>
+  </p>
+</div>
+
+<h3 class="card">* キーワード補完</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/autocomplete<br>
+  パラメーター: req: [キーワード]<br>
+  ex: /api/v1/autocomplete?req=ワーム
+  </p>
+</div>
+
+<h3 class="card">* 指定鯖の叫びを本日分取得</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/1day_shout<br>
+  パラメーター: server: [s,b,v,g]<br>
+  ex: /api/v1/1day_shout?server=s
+  </p>
+</div>
+
+<h3 class="card">* 雄叫びの検索</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/search_shout<br>
+  パラメーター: server: [s,v,b,g,all]<br>
+  パラメーター: word: [検索ワード]<br>
+  パラメーター: number: [最大件数] nil or 0 or 1-300<br>
+  パラメーター: range: [最大日付] nil 0 or 1-14<br>
+  ex: /api/v1/search_shout?server=s&word=ワーム<br>
+  ex: /api/v1/search_shout?server=s&number=10&word=ワーム<br>
+  ex: /api/v1/search_shout?server=s&number=10&range=0&word=ワーム<br>
+  ex: /api/v1/search_shout?server=all&number=100&range=14&word=TRSワーム
+  </p>
+</div>
+
+<h3 class="card">* 名前の検索</h3>
+<div class="card-body">
+  <p>
+  URL: /api/v1/search_name<br>
+  パラメーター: server: [s,v,b,g]<br>
+  パラメーター: word: [名前検索ワード]<br>
+  ex: /api/v1/search_name?server=s&word=ワーム
+  </p>
+</div>
+
+</div>
+</div>
+</div>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/toc.min.js"></script>
+<script src="/js/api.js"></script>

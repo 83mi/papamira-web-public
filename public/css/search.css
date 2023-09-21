@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+a.world:link { color: #FF0000; }
+a.world:visited { color: #FF0000; }
+a.world:hover { color: #FF0000; }
+a.world:active { color: #FF0000; }
+
+a.shout:link { color: #00008B; }
+a.shout:visited { color: #00008B; }
+a.shout:hover { color: #00008B; }
+a.shout:active { color: #00008B; }
+
+.wname {
+  color: #FF0000;    
+}
+.sname {
+  color: #0000FF;    
+}
+
+.modal-dialog-fluid {
+  max-width: inherit;
+  width: 98%;
+  height: 98%;
+  margin-left: 15px;
+  top: 0;
+  left: 0;
+}

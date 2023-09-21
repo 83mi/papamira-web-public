@@ -1,0 +1,68 @@
+<link href="/css/testing.css" rel="stylesheet">
+<h1>WebTestTools</h1>
+<br>
+<div class="container">
+  WebSpeech,正規表現テスト用<br>
+  <br>
+  <input type="text" id="test_word" size="60" placeholder="ボイステスト or お叫び本文"/>
+  <button id="test_word_reset" type="button" class="btn btn-primary btn-sm" >クリア</button>
+  <input type="text" id="test_reg" size="60" placeholder="サンプル正規表現"/>
+  <button id="test_reg_reset" type="button" class="btn btn-primary btn-sm" >クリア</button>
+  <br>
+  <button id="keyword_preset_redo" type="button" class="btn btn-danger btn-sm" >1つ戻す</button>
+  <br>
+
+  <input id="and_text" type="input" class="btn-primary btn-sm" placeholder="AND値入力"></input>
+  <button id="keyword_preset_x" type="button" class="btn btn-primary btn-sm" >AND追加</button>
+  <button id="keyword_and_clear" type="button" class="btn btn-primary btn-sm" >クリア</button>
+  <br>
+  
+  <input id="or_text" type="input" class="btn-warning btn-sm" placeholder="OR値入力"></input>
+  <button id="keyword_preset_y" type="button" class="btn btn-warning btn-sm" >OR追加</button>
+  <button id="keyword_or_clear" type="button" class="btn btn-warning btn-sm" >クリア</button>
+  <br>
+
+  <input id="not_text" type="input" class="btn-danger btn-sm" placeholder="NOT値入力"></input>
+  <button id="keyword_preset_z" type="button" class="btn btn-danger btn-sm">NOT追加</button>
+  <button id="keyword_not_clear" type="button" class="btn btn-danger btn-sm" >クリア</button>
+  <br>
+  <br>
+  <br>
+  <button id="run_voice" type="button" class="btn btn-success">再生</button>
+  <button id="run_reg" type="button" class="btn btn-success">正規表現マッチテスト</button>
+  </div>
+  <br>
+  <div class="container">
+    <div id="test_res">
+      出力結果
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div id="waku">
+  <h1>DnD</h1>
+  <!-- Dropエリア -->
+  <div id="dropArea">
+    <h3>条件ドロップする</h3>
+    <ul id="sort-drop-area">
+        <a id="dnd_top"><img src="/favicon-32x32.png"><span class="btn btn-info">"^"</span></a><br>
+        <a id="dnd_btm"><img src="/favicon-32x32.png"><span class="btn btn-info">".*$"</span></a><br>
+    </ul>
+  </div>
+  <!-- Dragエリア -->
+  <div id="dragArea">
+    <h3>条件をドラッグする</h3>
+    <a id="dnd_and"><img src="/favicon-32x32.png"><span class="btn btn-primary">AND</span></a><br>
+    <a id="dnd_or"><img src="/favicon-32x32.png"><span class="btn btn-warning">OR</span></a><br>
+    <a id="dnd_not"><img src="/favicon-32x32.png"><span class="btn btn-danger">NOT</span></a><br>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/testing.js"></script>
+<script src="/js/audio.js"></script>

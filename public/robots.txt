@@ -1,0 +1,11 @@
+User-Agent: *
+Disallow: /all/
+Disallow: /s/
+Disallow: /b/
+Disallow: /v/
+Disallow: /g/
+Disallow: /ss/
+Disallow: /form
+Disallow: /api/
+Disallow: /info_calendar
+Disallow: /testing

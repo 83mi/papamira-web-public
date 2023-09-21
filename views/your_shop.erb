@@ -1,0 +1,15 @@
+<div id="page">
+  <div class="container">
+    <h1><span class="image-ppap oi oi-sun text-danger"></span><span class="font-weight-bold">あなたの露店売上</span></h1>
+    <br>
+    <label class="col-sm-2 control-label">パスワードの入力</label>
+    <input id='shop_pass' maxlength='32' style="font-size:10px; width:50%; height:24px;" placeholder="ぱぱみら for GUI で入力したパスワード"><br>
+    <div class="container">
+<%=
+  @shop_data.to_s
+%>
+    </div>
+  </div>
+</div>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/shop_pass.js"></script>

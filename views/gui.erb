@@ -1,0 +1,682 @@
+<br>
+<br>
+<br>
+<link href="/css/help.css" rel="stylesheet">
+<link href="/css/help.css" rel="stylesheet">
+<link href="/css/gui.css" rel="stylesheet">
+<div class="container">
+<h1><span class="image-ppap oi oi-file"></span> ぱぱみら for GUI版</h1>
+<div class="container">
+<br>
+ごにょごにょしてます
+<br>
+<br>
+<h2 class="mark">これはなに？</h2>
+<div class="container">
+  (P)ぱいなっぽう (A)あっぽう (P)ぽーたる (A)あしすと (mi) みらーはよ (ra) れいどはよ<br>
+  <strong>ぱぱみら(papamira)</strong>のGUI版です。<br>
+  <br>
+  <img class="img_border" src="/png/gui_01.png" alt="gui">
+  <br>
+  <br>
+<div id="toc"></div>
+</div>
+
+<h2 class="mark">動作</h2>
+<div class="container">
+  Rubyライブラリが必須です<br>
+  作業員さらに急募!<br>
+</div>
+<br>
+
+<h2 class="mark">動作確認環境</h2>
+<ul>
+  <li>Windows Vista, 7, 8, 8.1, 10, 11 and x64</li>
+  <li>32bit OSでも動きますん</li>
+</ul>
+
+<h4 class="mark">ライブラリ</h4>
+<ul>
+  <li>ruby 2.5.3p105 (2018-10-18 revision 65156) [i386-mingw32]</li>
+  <li>RubyGnome2</li>
+  <li>GTK2(The GIMP Toolkit)</li>
+  <li>Rubyzip</li>
+</ul>
+
+<h4 class="mark">WindowsXP, Vista</h4>
+<div class="container">
+  WindowsXP,Vistaは対応していません<br>
+  今後も対応はしません
+</div>
+<br>
+
+<h4 class="mark">更新情報</h4>
+<div class="container">
+  <a href="/gui/update">ぱぱみら for GUI 更新情報</a>
+</div>
+<br>
+
+<h2 class="mark">ダウンロード</h2>
+<ul>
+  <li>最新版</li>
+  <ul>
+    <li>本体</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/papamira.zip">https://50393.s.time4vps.cloud/papamira/files/papamira.zip</a><br>
+    <br>
+    <li>ランタイムライブラリ[x86]</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/libs_x86.exe">https://50393.s.time4vps.cloud/papamira/files/libs_x86.exe</a><br>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/libs_x86.7z">https://50393.s.time4vps.cloud/papamira/files/libs_x86.7z</a> (non exe)<br>
+    <br>
+    <li>ランタイムライブラリ[x64]</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/libs_x64.exe">https://50393.s.time4vps.cloud/papamira/files/libs_x64.exe</a><br>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/libs_x64.7z">https://50393.s.time4vps.cloud/papamira/files/libs_x64.7z</a> (non exe)<br>
+    <br>
+    <li>チェックサム</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/sha256">sha256</a><br>
+    <br>
+    <li>ファイル一覧</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/">一覧</a><br>
+  </ul>
+  <br>
+  <li>オール・イン インストーラー【ぱぱみら for GUI + RuntimeLibrary + WinPcap入り】</li>
+  <ul>
+    <li>最新版</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/installer/papamira-setup-all_x86.exe">https://50393.s.time4vps.cloud/papamira/files/installer/papamira-setup-all_x86.exe [x86]</a><br>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/installer/papamira-setup-all_x64.exe">https://50393.s.time4vps.cloud/papamira/files/installer/papamira-setup-all_x64.exe [x64]</a><br>
+    <br>
+    <li>チェックサム</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/installer/sha256">sha256</a><br>
+    <br>
+    <li>過去の一覧</li>
+    <a href="https://50393.s.time4vps.cloud/papamira/files/installer/">一覧</a><br>
+  </ul>
+  <br>
+  <li>過去のバージョン</li>
+  <a href="https://50393.s.time4vps.cloud/papamira/update/">https://50393.s.time4vps.cloud/papamira/update/</a><br>
+  <a href="https://50393.s.time4vps.cloud/papamira/update/">すべてのsha256</a><br>
+  <br>
+</ul>
+
+<h2 class="mark">インストール</h2>
+<br>
+<div class="container">
+  <h3 class="mark">インストーラーなしの場合</h3>
+  <br>
+  <ul>
+  <li>winpcap 4.1.3 Driver +DLLs</a></li>
+    <a href="https://www.winpcap.org/">https://www.winpcap.org/</a>
+    <br>
+    <br>
+    <li>libs.exe (ランタイムライブラリ stable)</li>
+    https://50393.s.time4vps.cloud/papamira/files/libs.exe (7z exe)<br>
+    https://50393.s.time4vps.cloud/papamira/files/libs.7z (non exe)
+    <br>
+    <br>
+    <li>ぱぱみら for GUI (stable)</li>
+    https://50393.s.time4vps.cloud/papamira/files/papamira.zip
+    <br>
+    <br>
+  <h4 class="mark">WinPcapのインストール</h4>
+  <div class="container">
+    パケットを読むために必須です<br>
+    Version 4.1.3 Driver +DLLs をダウンロード後インストール<br>
+    <br>
+  </div>
+  <h4 class="mark">ランタイムライブラリのインストール</h4>
+  <div class="container">
+    ぱぱみら for GUI 実行に必須です<br>
+    <br>
+    1. ダウンロードした、libs.exe は7zで圧縮されています。(自動解凍exe付き)<br>
+    2. libs.exe を実行します<br>
+    3. どこでもいいので展開先をしています<br>
+    4. 展開先をRubyフォルダをC:\直下に移動させます。(場所は任意です)<br>
+    <br>
+      <div class="container">
+        ex: C:\Ruby<br>
+      </div>
+    <br>
+  </div>
+  <h4 class="mark">ぱぱみら for GUIのインストール</h4>
+  <div class="container">
+    一応本体です (ソースファイル付き)<br>
+    <br>
+    1. ダウンロードした、papamira.zipを展開します<br>
+    2. どこでもいいので展開先をしています<br>
+    3. 展開先をpapamiraフォルダをC:\直下に移動させます。(場所は任意です)<br>
+    <br>
+      <div class="container">
+        ex: C:\papamira<br>
+      </div>
+    <br>
+    4. c:\papamiraフォルダの "ぱぱみら" というショートカットのプロパティを設定します<br>
+    5. リンク先(T)となっている場所をRubyフォルダ、papamiraフォルダに置き換えてください<br>
+    6. 作業フォルダー(S) をpapamiraフォルダに変更します<br>
+    <br>
+      <div class="container">
+        ex: C:\papamira<br>
+      </div>
+    <br>
+    これでインストール完了です<br>
+    <br>
+    ショートカット例:
+      <div class="container">
+        ex: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb<br>
+      </div>
+  </div>
+  <br>
+  <h3 class="mark">引数について</h3>
+  <div class="container">
+    第1引数はネットワークデバイスのUUIDまたはデバイス番号です。引数なしで起動してダイアログまたは,<br>
+    ネットワークツール等で確認してください<br>
+    仮想ネットワークアダプタがある場合は複数あると思うので該当のデバイスをコピペしてください<br>
+    <br>
+      <div class="container">
+        ex: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 99999999-9999-9999-9999-999999999999<br>
+      </div>
+    <br>
+    第2引数のIPアドレスはキャプチャーする元のIPアドレスになります<br>
+    第2引数なしは自動でローカルネットワークのIPアドレスを取得します<br>
+    all と指定すると元のIPアドレスを全てとするので,VM等の通信も全てキャプチャされます<br>
+    <br>
+      <div class="container">
+        ex: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 99999999-9999-9999-9999-999999999999 all<br>
+      </div>
+    <br>
+    自分の通信内容だけ保持したい場合は,IPアドレスを入れてください<br>
+    <br>
+      <div class="container">
+        ex: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 99999999-9999-9999-9999-999999999999 192.168.11.2<br>
+      </div>
+    <br>
+    また,キャプチャーするデバイスが取得できない場合は,<br>
+    ぱぱみら for GUI 起動後にツール - Networkツールを選択して該当デバイスを探します<br>
+    または,起動引数等なしで起動させ,ダイアログで選択 or 確認してください<br>
+    <br>
+    コマンドプロンプト(cmd)からgetmacコマンドも有効な検索方法です<br>
+      <br>
+      <div class="container">
+        ex: $ getmac -v
+      </div>
+    <br>
+  </div>
+  <h3 class="mark">起動について</h3>
+  <div class="container">
+    C:\papamira\ぱぱみら.lnk を起動します<br>
+    または,デスクトップなどこのショートカットをコピーして起動します<br>
+    <br>
+    うまくGUIが表示されれば起動完了です<br>
+    <br>
+    特に起動時の引数(オプション)指定が存在しない場合はどのネットワークをキャプチャするかダイアログが出ます<br>
+    各環境に合わせて選択してください<br>
+    起動時のダイアログを表示しなくするためには、ショートカットの第1引数に該当するUUIDを入れてください<br>
+    <br>
+    <div class="container">
+      <b>!! デバイス番号でも起動できますが,v0.0.91以降は非推奨となります(ぺこぺこ</b><br>
+      <b>非推奨 0.0.90以前</b><br>
+      <div class="container">
+        ex1: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 1 192.168.1.145<br>
+        ex2: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 1 all<br>
+        ex3: C:\Ruby\bin\rubyw.exe C:\papamira\papamira.rb 2<br>
+      </div>
+    </div>
+    <br>
+    うまくキャプチャされない時は,引数等の設定を見なおしてみてください<br>
+    それでも上手くいかない場合は掲示板等に書いてみてください!<br>
+  </div>
+</ul>
+</div>
+<br>
+<br>
+<div class="container">
+  <h3 class="mark">インストーラー版の場合</h3>
+  <div class="container">
+  <br>
+  <img src="/png/pp_01.png" alt="01"><br>
+  管理者権限が必要ですので、[はい]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_02.png" alt="02"><br>
+  インストールを続行する場合は[次へ]を選択します<br>
+  インストールをキャンセルする場合は[キャンセル]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_03.png" alt="03"><br>
+  ぱぱみら for GUI と利用するライブラリのライセンスを確認して同意できた場合は,<br>
+  [同意する]にチェックを入れ[次へ]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_04.png" alt="04"><br>
+  インストールされるライブラリ内容です<br>
+  後で選択できますので、[次へ]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_05.png" alt="05"><br>
+  インストール先を選択します 任意で選択出来ます [通常はC:\papamira]<br>
+  今回の例は[D:/papamira]にしてみました<br>
+  変更後に[次へ]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_06.png" alt="06"><br>
+  プログラムグループの設定です。特に変更しなくて良いです<br>
+  [次へ]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_07.png" alt="07"><br>
+  インストールするライブラリを選択します<br>
+  <br>
+  * ぱぱみら for GUI<br>
+  * ぱぱみらライブラリ (Ruby)<br>
+  * WinPcap<br><br>
+  初めてインストールする方は、すべてチェックを入れます<br>
+  WinPcap導入済みの方はWinPcapのチェックを外します<br>
+  既にインストールしている方はぱぱみら for GUI だけチェックを入れてもかまいません<br>
+  該当項目にチェックを入れたら[次に]を選択します
+  <br>
+  <br>
+  <img src="/png/pp_08.png" alt="08"><br>
+  最終確認をしてください、その後[インストール]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_09.png" alt="09"><br>
+  インストールが始まります<br>
+  <br>
+  <br>
+  <img src="/png/pp_10.png" alt="10"><br>
+  完了したら、上記の画面が表示されます<br>
+  [完了]を選択します<br>
+  <br>
+  <br>
+  <img src="/png/pp_11.png" alt="11"><br>
+  デスクトップからぱぱみら for GUIを起動します<br>
+  <br>
+  起動引数については手動インストール時を同じですので,[引数について]を参照しましょう<br>
+  <br>
+  </div>
+</div>
+<br>
+
+<h2 class="mark">アンインストール</h2>
+<div class="container">
+  各ライブラリ、ぱぱみらのアンインストール方法です<br>
+  <br>
+  <h4 class="mark">WinPcapのアンインストール</h4>
+  <div class="container">
+    コントロールパネルのプログラム(アプリ)からアンインストールを選択しましょう<br>
+    または,設定 -> アプリからアンインストールを選択しましょう<br>
+  </div>
+  <br>
+
+  <h4 class="mark">ランタイムライブラリのアンインストール</h4>
+  <div class="container">
+    exe or 7zから展開した方はそのまま C:/Ruby をゴミ箱に入れましょう<br>
+  </div>
+  <br>
+
+  <h4 class="mark">ぱぱみら for GUIのアンインストール</h4>
+  <div class="container">
+    exe or zipから展開した方はそのまま C:/papamira をゴミ箱に入れましょう<br>
+  </div>
+  <br>
+
+  <h4 class="mark">ぱぱみら for GUI all in Packageのアンインストール</h4>
+  <div class="container">
+    インストーラー(test)で入れた方は,プログラム(アプリ)からアンインストールを選択しましょう<br>
+    また、設定ファイル等とpapamiraディレクトリが残りますので,手動で消しましょう<br>
+    <div class="container">
+    ex1: C:/papamira<br>
+    ex2: D:/papamira<br>
+    </div>
+  </div>
+  <br>
+</div>
+
+<h2 class="mark">自分でビルドする場合 for Devel</h2>
+<div class="container">
+  各ライブラリのインストール方法です<br>
+  <br>
+  <h4 class="mark">Rubyのインストール</h4>
+  <div class="container">
+    <a href="https://rubyinstaller.org/">https://rubyinstaller.org/</a><br>
+    Ruby Installer 2.x.x DownLoadしましょう<br>
+    <div class="container">
+    !! Devkitありのバージョンを選択<br>
+    !! Ruby+Devkit 2.x.x-1(x86 or x64)<br>
+    </div>
+  </div>
+  <br>
+
+  <h4 class="mark">WinPcapのインストール</h4>
+  <div class="container">
+    <a href="https://www.winpcap.org/">https://www.winpcap.org/</a><br>
+    <a href="https://www.winpcap.org/devel.htm">https://www.winpcap.org/devel.htm</a><br>
+    WinPcap v4.1.3 とWinPcap v4.1.2のlibファイルを取得しましょう<br>
+    <br>
+    WinPcap v4.1.3をインストールしましょう<br>
+    WinPcap 4.1.2 Developer's Pack をDownLoadしましょう<br>
+    <br>
+    Developer's Packから 各種アーキテクチャのlibファイルとヘッダファイル(共通)をinclude/, lib/ の直下に配置しましょう
+  </div>
+  <br>
+
+  <h4 class="mark">ターミナルを起動します</h4>
+  <div class="container">
+    コマンドプロンプトやPowerShell等です<br>
+    まずはRubyにパスが通っているか以下のコマンドを実行しましょう<br>
+    <br>
+    <div class="container">
+      $ ruby -v
+    </div>
+    <br>
+    バージョン番号、アーキテクトが表示されましたか?<br>
+    表示されない場合は,Rubyのインストールに戻りましょう
+  </div>
+  <br>
+
+  <h4 class="mark">Ruby ライブラリのアップデート</h4>
+  <div class="container">
+    ターミナル上からアップデートを以下のように行いましょう<br>
+    <br>
+    <div class="container">
+      $ gem update
+    </div>
+  </div>
+  <br>
+
+  <h4 class="mark">関連ライブラリのインストール,ビルド</h4>
+  <div class="container">
+    ターミナル上からアップデートを以下のように行いましょう<br>
+    <br>
+    <div class="container">
+      $ cd C:\papamira<br>
+      $ bundle install<br>
+      $ ...<br>
+      $ ...
+    </div>
+    <br>
+    ぱぱみら for GUI のディレクトリに移動して、bundle install を行います<br>
+    ビルドエラーが出たら掲示板に貼り付けて応援を待ちましょう<br>
+    <br>
+    'PPAP_LIBS'というファイルをRuby/ 直下に作成して中身を '2.0.1' と記述しましょう<br>
+    #シングルクオートは, いりません
+  </div>
+  <br>
+
+  <h4 class="mark">ぱぱみら for GUI 起動</h4>
+  <div class="container">
+    ターミナル上から以下のように行いましょう<br>
+    <br>
+    <div class="container">
+      $ ruby ./papamira.rb
+    </div>
+    <br>
+    無事ネットワークアダプタの選択画面が出たら完了です<br>
+    <br>
+    Lets Go ぱぱみら!!
+  </div>
+  <br>
+</div>
+
+<h2 class="mark">トップ画面</h2>
+<div class="container">
+  叫び:　叫び,ワールドチャットを表示します<br>
+  一般: 　白チャットを表示します<br>
+  パーティー: 　パーティーチャットを表示します<br>
+  ギルド: 　ギルドチャットを表示します<br>
+  耳打ち: 　耳打ちチャットを表示します<br>
+  キーワード: 　指定したキーワード文字がマッチした時に表示されます (正規表現)<br>
+  露店: 　露店で販売した情報を表示します<br>
+  情報: 　自身のログイン情報やアラートを表示します<br>
+  検索: 　過去に取得した上記の情報を検索します (正規表現)<br>
+  クラウド検索: 　ぱぱみら for Web から検索します (正規表現)<br>
+</div>
+<br>
+
+<h2 class="mark">メニューバー</h2>
+<div class="container">
+  <ul>
+    <li>システム - 終了</li>
+    終了します。閉じるボタンと同じです
+    <br>
+    <br>
+    <li>通知音</li>
+    各種チャットが発生した時に指定した通知音(*.wavファイル)を再生し、通知を行います<br>
+      [叫び, 一般, パーティー, ギルド, 耳打ち, キーワード, 露店, 切断検知]
+    <br>
+    <br>
+    <li>通知音 - サウンドファイル変更</li>
+    各種通知音に音声ファイル(*.wavファイル)を指定します
+    <br>
+    <br>
+    <li>通知欄</li>
+    各種チャットが発生した時に通知欄に書き込みを行います<br>
+      [叫び, 一般, パーティー, ギルド, 耳打ち, キーワード, 露店, 切断検知]
+    <br>
+    <br>
+    <li>オプション</li>
+    各種表示上の設定です
+    <br>
+    <br>
+    <li>オプション - 自動スクロール</li>
+    チャットが発生した場合にログを自動でスクロールします
+    <br>
+    <br>
+    <li>オプション - タスクの点灯</li>
+    最小化されている場合にタスクが点灯します
+    <br>
+    <br>
+    <li>オプション - 最小化でタスクトレイ</li>
+    最小化した場合にタスクバーから表示が消え,タスクトレイに表示されます
+    <br>
+    <br>
+    <li>オプション - キーワードマッチ時にクリップボードへ名前をコピー</li>
+    キーワード通知設定にしている場合、マッチした叫び主の名前をクリップボードに自動でコピーします
+    <br>
+    <br>
+    <li>オプション - ログを記録しない</li>
+    ログファイルに書き込みを停止します<br>
+      このオプションは設定に保存されません
+    <br>
+    <br>
+    <li>オプション - 露店巡りのログを記録しない</li>
+    露店を見ても情報欄に出力しません<br>
+    <br>
+    <li>オプション - 前回ログ表示の設定</li>
+    起動時の前回ログ履歴の表示設定です<br>
+    0-1000までの値を設定します デフォルト値は20行です
+    <br>
+    <br>
+    <li>オプション - ログ表示</li>
+    ログの時間表示の設定です.表示上の設定でログファイルには[YYYY/MM/DD hh:mm:ss]が書き込まれます<br>
+      [年月日:時間, 月日:時間, 時間, なし]
+    <br>
+    <br>
+    <li>オプション - フォント</li>
+    トップ画面に表示されるログのフォントとサイズを指定します
+    <br>
+    <br>
+    <li>機能 - 通知欄</li>
+    ワンライナー, 5ライナー, ぱいなっぷるの最前面に表示されるウインドウを表示します (ぱいなっぷる :D)
+    <br>
+    <br>
+    <li>機能 - キーワード</li>
+    キーワード通知の文字列を入力します。改行で複数分けることが可能です<br>
+    正規表現に対応しています
+    <br>
+    <br>
+    <li>機能 - 切断通知</li>
+    切断通知時のセッション数を指定します。仮想環境を利用する場合に指定します<br>
+      通常は1セッションを指定します (デフォルトは通知しない)
+    <br>
+    <br>
+    <li>機能 - メンテ通知</li>
+    ログインサーバがアクティブなのか確認用のダイアログを表示します<br>
+    ノンアクティブの場合は,アクティブになるまで待ち,通知と通知音が発生します<br>
+    通知と通知音は設定によっては発生しません
+    <br>
+    <br>
+    <li>機能 - クラウド露店</li>
+    クラウド上から露店売上を確認できるようにします<br>
+    通常はオフとなっています
+    <br>
+    <br>
+    <li>ツール - Networkツール</li>
+    現在のアクティブなネットワーク情報を表示します
+    <br>
+    <br>
+    <li>ツール - アイテム辞書ツール</li>
+    アイテム辞書のカスタマイズをします
+    <br>
+    <br>
+    <li>ヘルプ - About</li>
+    ぱぱみら for GUI のバージョン情報などを表示します
+    <br>
+    <br>
+    <li>ヘルプ - アップデート</li>
+    アップデートがあるかインターネット上のサーバに確認します<br>
+    アップデートがある場合はそのままアップデート可能です(ランタイムライブラリの更新はおこないません)
+  </ul>
+</div>
+<br>
+</div>
+
+<h3 class="mark">通知欄</h3>
+<h4>ポップアップメニュー</h4>
+<div class="container">
+  名前コピー: 名前をクリップボードにコピーします<br>
+  本文コピー: 本文をクリップボードにコピーします<br>
+  すべてコピー: 名前と本文をクリップボードにコピーします<br>
+  クリア: 通知欄に表示されてる通知をクリアします<br>
+  通知欄を閉じる: 通知欄を閉じます
+</div>
+<br>
+
+<h3 class="mark">検索</h3>
+
+<h4>キーワード検索</h4>
+<div class="container">
+  ローカルのログファイルからマッチした情報を表示します<br>
+  正規表現がそのまま利用できます。
+</div>
+<br>
+
+<h4>クラウド検索</h4>
+<div class="container">
+  ぱぱみら for Webからマッチした情報を表示します<br>
+  正規表現がそのまま利用出来ないです。詳しくは,ぱぱみらの<a href="/help">HELP</a>を参照してください
+</div>
+<br>
+
+<h3 class="mark">機能</h3>
+
+<h4>クラウド露店</h4>
+<div class="container">
+  自分の露店売上をWeb上から確認できます<br>
+  <br>
+  <h4 class="mark">UUID</h4>
+  <div class="container">
+    起動時に自動で作成します<br>
+    URL作成時に必須です
+  </div>
+  <br>
+  <h4 class="mark">PASS</h4>
+  <div class="container">
+    任意で入力します <b>32文字固定</b>です<br>
+    データ送信時の暗号化に利用します
+  </div>
+  <br>
+  <h4 class="mark">URL</h4>
+  <div class="container">
+    取得したURLを表示します<br>
+    UUIDから作成指示したURLを取得して表示しています
+  </div>
+  <br>
+  <div class="container">
+    <b>!! URLはUUIDが変わるまたは,7日過ぎると変更されます</b><br>
+  </div>
+  <br>
+  <h4 class="mark">露店売上時にデータを送信する</h4>
+  <div class="container">
+    チェックすると,露店売上があった場合にクラウド上に暗号化して送信されます<br>
+  </div>
+  <br>
+  <h4 class="mark">購入者の名前を表示する</h4>
+  <div class="container">
+    クラウド上に送信前に購入者の名前を "ぱぱみら" に書き換えて送信しますが<br>
+    有効にすると購入者の名前のままとなります<br>
+    誰に売れたかは,GUIの画面を確認してください
+  </div>
+  <br>
+  <h4 class="mark">設定方法</h4>
+  <div class="container">
+    <b>[URL作成]</b> を押します<br>
+    URLを取得できると,URLが表示されます<br>
+    <br>
+    <b>"露店売上時にデータを送信する"</b> にチェックを入れます<br>
+    <br>
+  </div>
+  <h4 class="mark">露店売上を見る</h4>
+  <div class="container">
+    露店売上後に該当URLにアクセスして,暗号化時のパスを入れます (32byte固定)<br>
+    <b>該当URLをリロード</b>すると売上一覧が表示されます
+  </div>
+</div>
+<br>
+
+<h3 class="mark">質問,要望</h3>
+<div class="container">
+  外部掲示板を利用させて頂いています<br>
+  したらばの良さ気な板...を利用しています<br>
+</div>
+<br>
+
+<h3 class="mark">お問い合わせ</h3>
+<div class="container">
+  ぱぱみら for Web にお問い合わせ用のフォームがあります<br>
+  送信すると,ログに内容が書かれるため読み逃すことがありますので,できるだけ掲示板を活用ください<br>
+  <span class="lead text-danger">注意!! サーバ管理者までしか届きません。</span><br>
+</div>
+<br>
+
+<h3 class="mark">隠し要素</h3>
+<div class="container">
+  あるかもしれません！<br>
+  探してみましょう!<br>
+</div>
+<br>
+
+<h3 class="mark">ファイルサーバ</h3>
+<div class="container">
+  <img src="/png/pico-icon.png" alt="picotaro" class="image-ppap">
+  他の開発者の方々ファイルサーバ等にアーカイブ等を置かせて頂いてありがとうございます<br>
+  この場でお礼もしあげます<br>
+  出典: 心の中
+</div>
+<br>
+
+<h3 class="mark">人柱様</h3>
+<div class="container">
+  <img src="/png/pico-icon.png" alt="picotaro" class="image-ppap">
+  0.0.1の頃よりぱぱみらを動かし,動作確認,バグなどを報告してくれた猛者さん達.<br>
+  また,パケットについて御教授していただいたみなさん,ありがとうございます!!<br>
+  思いもよらないバグやアイディアを色々与えてくれました.お礼申し上げます!!<br>
+  出典: 心の中
+</div>
+<br>
+
+<h3 class="mark">管理人について</h3>
+<div class="container">
+  <img src="/favicon-32x32.png" alt="sekihan" class="image-ppap">
+  RSをこよなく愛するがまともにプレイできる時間がないため,お叫びだけでプレイしている変わり者.
+  各鯖に出没して狩りをすることもあれば,全くINしないこともしばしば.
+  RSに新規,復帰者で人が増えてくれること祈っている.狩りをしないことで祈る時間が増えた.<br>
+  出典: 心の中
+</div>
+<br>
+
+Tue, 23 Oct 2018 19:14:14 +0900
+<br>
+Tue, 02 Oct 2018 11:38:39 +0900 first init.
+</div>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/toc.min.js"></script>
+<script src="/js/help.js"></script>

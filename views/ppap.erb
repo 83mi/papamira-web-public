@@ -1,0 +1,129 @@
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/ppap.css" rel="stylesheet">
+<div class="row">
+  <div class="col-sm-11" id="stream_cell">
+  <div class="card border-0" style="top: -32px;">
+  <div class="card-body">
+    <div class="ppap_field">
+      <p style="font-size:42px">
+        <%=
+          case @title_server
+          when 'S'
+            tclass = "badge-danger"
+          when 'B'
+            tclass = "badge-primary"
+          when 'V'
+            tclass = "badge-warning"
+          when 'G'
+            tclass = "badge-secondary"
+          else
+            tclass = "badge-default"
+          end
+          "<button class='btn badge #{tclass} font-weight-bold' data-toggle='collapse' data-target='#ppap_parts'>#{@title_server}鯖</button>"
+        %>
+        <span class="font-weight-bold"> Logs</span><span class="image-ppap oi oi-wifi"></span>
+      </p>
+      <div id="ppap_parts" class="collapse show">
+        <div class="form-group has-success">
+          <div class="navbar-form" role="search">
+
+            <div class="InputFrame" style="width:75%;">
+              <input type="text" id="word" name="word" style="width:100%;" placeholder="検索キーワード 絞り込みはスペースを挟む 例: 売 異界 etc... 詳細は/help"/>
+              <div class="ClearButton" onclick="purge_word_text()"></div>
+            </div>
+
+            <select style="font-size:12px" id="number" title="最大検索件数">
+              <option value="20">20件</option>
+              <option value="50" selected="selected">50件</option>
+              <option value="100">100件</option>
+              <option value="300">300件</option>
+              <option value="1000">1000件</option>
+              <option value="99999">すべて</option>
+            </select>
+            <br>
+            <button id="search" type="button" class="btn btn-success">検索</button>
+
+            <select style="font-size:12px" id="auto_enable" title="入力補完">
+              <option value="0" selected="selected">補完しない</option>
+              <option value="1">辞書から補完</option>
+              <option value="2">検索履歴から補完</option>
+            </select>
+
+            <button id="now" type="button" class="btn btn-primary btn-sm"><span class="oi oi-reload"></span>最新</button>
+            <button id="day" type="button" class="btn btn-primary btn-sm">day</button>
+            <button id="2day" type="button" class="btn btn-primary btn-sm">2day</button>
+            <button id="3day" type="button" class="btn btn-primary btn-sm">3day</button>
+            <button id="week" type="button" class="btn btn-primary btn-sm">week</button>
+            <button id="2week" type="button" class="btn btn-primary btn-sm">2week</button>
+            <a href="stream" id="stream" class="btn btn-primary btn-sm"><span class="oi oi-flash"></span>Stream</a>
+            <a href="/help#topic6" target="_blank" class="btn btn-primary btn-sm">HELP</a>
+            <select style="font-size:12px" id="loadtime" title="自動更新間隔の設定">
+              <option value="30">30秒</option>
+              <option value="60" selected="selected">60秒</option>
+              <option value="120">120秒</option>
+              <option value="300">300秒</option>
+              <option value="31536000">更新なし</option>
+            </select>
+            <br>
+            <button id='calendar' type='button' class='btn btn-primary btn-sm' data-toggle='collapse' data-target='#ppap_calendar' aria-expanded='false' aria-controls='ppap_calendar'><span class="oi oi-calendar">カレンダ</span></button>
+            <button id='tags' type='button' class='btn btn-danger btn-sm badge-primary' data-toggle='collapse' data-target='#ppap_tags' aria-expanded='false' aria-controls='ppap_tags'><span class="oi oi-tag"></span>タグ</button>
+
+            <div id="ppap_calendar" class="collapse">
+              <input id="datepicker" type="text" size="7" placeholder="日付入力"/>
+              <button id="calendar_done" class="btn btn-primary btn-sm oi oi-calendar">選択</button>
+            </div>
+          </div>
+          <div id="ppap_tags" class="collapse">
+            <br>
+            <button id="tag0" type="button" class="btn btn-primary btn-sm" >アイテム買</button>
+            <button id="tag1" type="button" class="btn btn-primary btn-sm" >アイテム売</button>
+            <button id="tag2" type="button" class="btn btn-primary btn-sm" >ギルド</button>
+            <button id="tag3" type="button" class="btn btn-primary btn-sm" >メンバー募集</button>
+            <button id="tag4" type="button" class="btn btn-primary btn-sm" >メインクエ</button>
+            <button id="tag5" type="button" class="btn btn-primary btn-sm" >秘密募集</button>
+            <button id="tag6" type="button" class="btn btn-primary btn-sm" >かけら代行</button>
+            <button id="tag7" type="button" class="btn btn-primary btn-sm" >各種代行</button>
+            <button id="tag8" type="button" class="btn btn-primary btn-sm" >鏡貸</button>
+            <button id="tag9" type="button" class="btn btn-primary btn-sm" >GEM関係</button>
+            <button id="tag10" type="button" class="btn btn-primary btn-sm" >ツボ</button>
+            <button id="tag11" type="button" class="btn btn-primary btn-sm" >クレスト</button>
+            <button id="tag12" type="button" class="btn btn-primary btn-sm" >インク</button>
+            <button id="tag13" type="button" class="btn btn-primary btn-sm" >テイム</button>
+            <button id="tag14" type="button" class="btn btn-primary btn-sm" >その他</button>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loading"></div>
+    <div id="result"></div>
+      <table id="stream_table" class="table table-sm">
+      <thead>
+        <tr>
+          <th class="text-nowrap fixed">時間</th>
+          <th>名前</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= @body %>
+      </tbody>
+      </table>
+  </div>
+  </div>
+  </div>
+  <%=
+    live = File.open('views/live.erb').read
+    live.gsub!("CHAT_BODY", @chat_body.to_s)
+    live.gsub!("CHAT_PEOPLE", @chat_people.to_s)
+  %>
+</div>
+
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.ui.datepicker-ja.min.js"></script>
+<script src="/js/jquery.cookie.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/js/live.js"></script>
+<script src="/js/ppap.js"></script>

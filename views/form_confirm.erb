@@ -1,0 +1,49 @@
+<div id="page">
+  <div class="container">
+    <h1><span class="image-ppap oi oi-sun text-danger"></span><span class="font-weight-bold">お問い合わせ内容確認</span></h1>
+    <span class="lead text-danger">注意!! サーバ管理者まで届きます。</span><br>
+    <div>
+      <br>
+      <div>
+        <span class="h4">Name:</span> <%=@user_name%>
+      </div>  
+      <div>
+        <span class="h4">Email:</span> <%=@user_email%>
+        <br>
+        <br>
+      </div>  
+      <div>
+        <span class="h4">Subject:</span> <%=@user_subject%>
+        <br>
+        <br>
+      </div>  
+      <div>
+        <span class="h4">本文:</span>
+        <br>
+        <br>
+        <p>
+          <%=@user_text.gsub(/\n/, "<br>\n")%>
+        </p>
+      </div>
+      <div style="display:inline-flex">
+        <form action="/form" method="POST">
+          <input type="submit" id="form_back" class="btn btn-info" value="修正する">
+          <input type="hidden" value="<%=@user_name%>" name="f_name">
+          <input type="hidden" value="<%=@user_email%>" name="f_mail">
+          <input type="hidden" value="<%=@user_subject%>" name="f_subject">
+          <input type="hidden" value="<%=@user_text%>" name="f_text">
+          <input type="hidden" value="<%=@session%>" name="f_session">
+        </form>
+        <form action="/form_post" method="POST" class="ml-4">
+          <input type="submit" id="form_send" class="btn btn-info" value="送信する">
+          <input type="hidden" value="<%=@user_name%>" name="f_name">
+          <input type="hidden" value="<%=@user_email%>" name="f_mail">
+          <input type="hidden" value="<%=@user_subject%>" name="f_subject">
+          <input type="hidden" value="<%=@user_text%>" name="f_text">
+          <input type="hidden" value="<%=@session%>" name="f_session">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/bootstrap.min.js"></script>
